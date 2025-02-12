@@ -110,3 +110,18 @@ models:
         
         - name: item_type
           description: Type of the item (Book or article)
+
+  - name: dim_events_arrival_times
+    description: Contains timestamp for each event and when it arrived in our backend system for each session id by a user  
+    columns:
+        - name: session_id
+          description: Unique identifier for the user session
+
+        - name: user_id
+          description: Unique identifier for the user interacting with out platform
+
+        - name: event_timestamp
+          description: timestamp when the event happend
+        
+        - name: arrival_timestamp
+          description: timestamp the event arrived in our backend system
