@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: src_mobile_events
+    description: Raw mobile event data kept in the same source format
+
+  - name: src_web_events
+    description: Raw web event data kept in the same source format
+
+  - name: fct_events
+    description: Combined mobile and web data unionized based on the common columns to bring events analytics under one data model
+    columns:
+        - name: event_source
+          description: Mentions the source of records whether they are coming from web or mobile event data
+
+        - name: event_timestamp
+          description: Timestamp of event happening
+        
+        - name: event_name
+          description: Type of the happened event 
+        
+        - name: user_id
+
+        - name: user_access_type
+          description: Access is either free or premium
+
+        - name: session_id
+
+        - name: country_code
+
+        - name: item_id
+          description: Identification of the item that the user interacted with in the session
+
