@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: Raw
+      description: "Raw data stored under 'Raw' dataset(schema) in Google Big Query"
+      tables:
+        
+        - name: raw_mobile_events
+          description: Raw mobile event data (uploaded as CSV for this exercise)
+        
+        - name: raw_web_events
+          descrption: Raw web event data (uploaded as CSV for this exercise)
