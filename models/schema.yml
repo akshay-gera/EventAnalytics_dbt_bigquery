@@ -20,14 +20,50 @@ models:
           description: Type of the happened event 
         
         - name: user_id
+          description: Unique identifier for the user interacting with the platform whether web or app
 
         - name: user_access_type
           description: Access is either free or premium
 
         - name: session_id
+          description: Unique identifier for the user session
 
         - name: country_code
 
         - name: item_id
           description: Identification of the item that the user interacted with in the session
 
+  - name: dim_app_device_features
+    description: For each session id for a user from mobile event data, this table Contains additional information about device that is used to login into the app.   
+    columns:
+        - name: session_id
+          description: Unique identifier for the user session
+
+        - name: user_id
+          description: Unique identifier for the user interacting with the application
+        
+        - name: client_id
+          description: Unique identifier for the client or device used for the event
+        
+        - name: device_locale_code
+
+        - name: device_locale_country
+          description: The country associated with the device
+        
+        - name: device_locale_language
+          description: The language of the device at the time of interaction
+        
+        - name: device_platform_name
+          description: Operating system of the device ( Android or IOS)
+        
+        - name: event_version
+          description: Version number of the event type at the time of interaction
+        
+        - name: device_make
+          description: The make or brand of the device used ( "Samsung", "Apple") at the time of interaction
+        
+        - name: application_version_code
+          description: The app version code at the time of interaction
+        
+        - name: application_version_name
+          description: The app version name at the time of interaction
