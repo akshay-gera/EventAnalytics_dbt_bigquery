@@ -67,3 +67,34 @@ models:
         
         - name: application_version_name
           description: The app version name at the time of interaction
+
+  - name: dim_web_browser_attributes
+    description: For each session id for a user from web event data, this table Contains additional information about browser and device that is used to login into the website
+    columns:
+        - name: session_id
+          description: Unique identifier for the user session
+
+        - name: user_id
+          description: Unique identifier for the user interacting with the application
+        
+        - name: fingerprint
+        
+        - name: browser_name
+          description: Name of the browser used by the user for that session (Chrome, Firefox)
+        
+        - name: browser_version
+          description: Version number of the browser used by the user
+        
+        - name: language
+          description: The language setting of the user's browser or device 
+        
+        - name: screen_resolution
+          description: The screen resolution of the user's device 
+        
+        - name: device_type
+          description: The type of device used by the user 
+        
+        - name: cookies_enabled
+          description: Boolean indicating whether the user has cookies enabled in their browser (1 for true, 0 for false)
+        
+        - name: referrer
