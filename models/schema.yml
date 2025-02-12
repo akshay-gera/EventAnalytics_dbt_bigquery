@@ -98,3 +98,15 @@ models:
           description: Boolean indicating whether the user has cookies enabled in their browser (1 for true, 0 for false)
         
         - name: referrer
+
+  - name: dim_items
+    description: Contains Information about the items being interacted with
+    columns:
+        - name: item_id
+          description: Unique item_id which acts as unique identifier of item information
+
+        - name: item_title
+          description:  Title of the item being interacted with by the user
+        
+        - name: item_type
+          description: Type of the item (Book or article)
