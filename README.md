@@ -97,9 +97,10 @@ This table shows how each row represents a distinct user interaction with the pl
 
 
 ## Challenges Faced
-- Unifying Disparate Data: Since the data comes from two different platforms and has a lot of uncommon fields, it was a challenge to conceptualize the unification of data. Unioninzing led to a single source of truth for content engagement across different platform
+- Unifying Disparate Data: Since the data comes from two different platforms and has a lot of uncommon fields, it was a challenge to conceptualize the unification of data. Unionizing led to a single source of truth for content engagement across different platform
 - Using Data Normalization Techniques to separate transactional data from descriptive data and deciding data models with a long-term vision and not focusing on short-term solutions to give a single data model that could answer everything
 - Getting a holistic understanding of customer engagement across sessions due to a lack of data completeness
+- Creating a data model on customer subscription status was a challenge based on the event data due to the nature of changing membership status. It should be recorded and streamed separately and can be modeled as a Slowly Changing Dimension in dbt to keep a history of changes to membership 
 
 ## Project Assumptions
 - Data Quality and Consistency: For the sake of simplicity, we are assuming that the data is clean and consistent (in terms of format) and adheres to the schema every time it flows into our backend system.
