@@ -88,3 +88,6 @@ This table shows how each row represents a distinct user interaction with the pl
 | 67893      | 12348   | 2025-02-12 09:45:00  | 2025-02-12 09:46:45 |
 
 
+## Glimpse of Front-End Dashboard Coming from Fct_Events Data Model
+
+![image](https://github.com/user-attachments/assets/37e79b14-1420-4e0d-8ff9-84bf5489340d)
