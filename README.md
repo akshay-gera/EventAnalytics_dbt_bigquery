@@ -22,9 +22,9 @@ The data modeling exercise also builds the foundation of the transformation from
 
 To bring together the mobile and web event data, we apply the following transformations:
 
-- **Data Normalization**: Breaking the raw data in Fact and dimension tables was necessary for efficient and optimized data modeling. This is done to ensure star schema where single fact table can be connected to dimensions to get more granularity
+- **Data Normalization**: Breaking the raw data in Fact and dimension tables was necessary for efficient and optimized data modeling. This is done to ensure star schema where a single fact table can be connected to dimensions to get more granularity
 - **Union to Get Fct_Events**: The mobile and web data are first unionized, based on the common columns between both data. A data source identifier is given to keep track of source data after unionization. 
-- **Mobile Data Attributes**: The columns specific to mobile data attributes coming from mobile event data as stored as a dimension table with user_id, and session_id as primary keys. We can join this with Fct_events to get more granularity of mobile event data
+- **Mobile Data Attributes**: The columns specific to mobile data attributes coming from mobile event data are stored as a dimension table with user_id, and session_id as primary keys. We can join this with Fct_events to get more granularity of mobile event data
 - **Web Data Attributes**: On similar lines, create a dimension table on web event data attributes also with user_id, and session_id as primary keys. We can join this with Fct_events to get more granularity of mobile event data
 
 ## Models Overview
