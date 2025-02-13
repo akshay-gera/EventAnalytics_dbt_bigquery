@@ -77,7 +77,7 @@ This table shows how each row represents a distinct user interaction with the pl
 
 
 ### 5. `dim_events_arrival_times`
-- **Description**: This model contains timestamps of event happening and when it reached our backend system.
+- **Description**: This model contains timestamps of events happening and when they reached our backend system.
 
 
 | session_id | user_id | event_timestamp      | arrival_timestamp   |
@@ -94,3 +94,10 @@ This table shows how each row represents a distinct user interaction with the pl
 ## Glimpse of Front-End Dashboard Coming from Fct_Events Data Model
 - The model Fct_Events can be used to plot charts like these to answer the preliminary questions about our content engagement 
 ![image](https://github.com/user-attachments/assets/37e79b14-1420-4e0d-8ff9-84bf5489340d)
+
+
+## Project Assumptions
+- Data Quality and Consistency: For the sake of simplicity, we are assuming that the data is clean and consistent (in terms of format) and adheres to the schema every time it flows into our backend system.
+- Data Validation: We are assuming that the data quality is reliable to perform further transformations. We are assuming we have all data testing in place (data validation checks, accepted values, null value handling, unit testing, etc.)
+- Data Ingestion Process: We are assuming that incremental loads logic already exists to insert only new records into our transformed tables to ensure query optimization
+  
