@@ -77,7 +77,7 @@ This table shows how each row represents a distinct user interaction with the pl
 
 
 ### 5. `dim_events_arrival_times`
-- **Description**: This model contains timestamps of events happening and when they reached our backend system.
+- **Description**: This model contains timestamps of events happening and when they reach our backend system.
 
 
 | session_id | user_id | event_timestamp      | arrival_timestamp   |
@@ -95,6 +95,10 @@ This table shows how each row represents a distinct user interaction with the pl
 - The model Fct_Events can be used to plot charts like these to answer the preliminary questions about our content engagement 
 ![image](https://github.com/user-attachments/assets/37e79b14-1420-4e0d-8ff9-84bf5489340d)
 
+
+## Challenges Faced
+- Unifying Disparate Data: Since the data comes from two different platforms and has a lot of uncommon fields, it was a challenge to conceptualize the unification of data. Unioninzing led to a single source of truth for content engagement across different platform
+- Using Data Normalization Techniques to separate transactional data from descriptive data and deciding data models with a long-term vision and not focusing on short-term solutions to give a single data model that could answer everything
 
 ## Project Assumptions
 - Data Quality and Consistency: For the sake of simplicity, we are assuming that the data is clean and consistent (in terms of format) and adheres to the schema every time it flows into our backend system.
