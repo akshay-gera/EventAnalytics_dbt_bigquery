@@ -27,3 +27,14 @@ To bring together the mobile and web event data, we apply the following transfor
 - **Mobile Data Attributes**: The columns specific to mobile data attributes coming from mobile event data as stored as a dimension table with user_id, and session_id as primary keys. We can join this with Fct_events to get more granularity of mobile event data
 - **Web Data Attributes**: On similar lines, create a dimension table on web event data attributes also with user_id, and session_id as primary keys. We can join this with Fct_events to get more granularity of mobile event data
 
+## Example of Data in `fct_events`
+
+Here's an example of the data structure and typical values stored in the `fct_events` model:
+
+| event_source | event_timestamp  | event_name | user_id | user_access_type | session_id | country_code | item_id |
+|--------------|------------------|------------|---------|------------------|------------|--------------|---------|
+| mobile       | 2025-02-12 09:15 | view_item  | 12345   | premium          | 67890      | US           | 98765   |
+| web          | 2025-02-12 09:20 | click_item | 12346   | free             | 67891      | CA           | 98766   |
+
+This table shows how each row represents a distinct user interaction with the platform, including the source of the event (mobile or web), timestamp, type of event, and details of the session.
+
