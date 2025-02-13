@@ -103,7 +103,9 @@ This table shows how each row represents a distinct user interaction with the pl
 - Creating a data model on customer subscription status was a challenge based on the event data due to the nature of changing membership status. It should be recorded and streamed separately and can be modeled as a Slowly Changing Dimension in dbt to keep a history of changes to membership 
 
 ## Project Assumptions
+- Data Ingestion: We are assuming that the data is ingested from streaming platforms and resides in the Raw schema of our Google Big Query. To ensure simplicity we uploaded it as CSV in big query raw schema and treated that as ingested data
+- Data Orchestration: The assumption is made that the dbt runs are triggered through an orchestration tool which runs on the set time to perform these transformations on schedule 
 - Data Quality and Consistency: For the sake of simplicity, we are assuming that the data is clean and consistent (in terms of format) and adheres to the schema every time it flows into our backend system.
 - Data Validation: We are assuming that the data quality is reliable to perform further transformations. We are assuming we have all data testing in place (data validation checks, accepted values, null value handling, unit testing, etc.)
-- Data Ingestion Process: We are assuming that incremental loads logic already exists to insert only new records into our transformed tables to ensure query optimization
+- Data Loading Process: We are assuming that incremental loads logic already exists to insert only new records into our transformed tables to ensure query optimization
   
