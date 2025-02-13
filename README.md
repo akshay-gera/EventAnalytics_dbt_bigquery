@@ -99,6 +99,7 @@ This table shows how each row represents a distinct user interaction with the pl
 ## Challenges Faced
 - Unifying Disparate Data: Since the data comes from two different platforms and has a lot of uncommon fields, it was a challenge to conceptualize the unification of data. Unioninzing led to a single source of truth for content engagement across different platform
 - Using Data Normalization Techniques to separate transactional data from descriptive data and deciding data models with a long-term vision and not focusing on short-term solutions to give a single data model that could answer everything
+- Getting a holistic understanding of customer engagement across sessions due to a lack of data completeness
 
 ## Project Assumptions
 - Data Quality and Consistency: For the sake of simplicity, we are assuming that the data is clean and consistent (in terms of format) and adheres to the schema every time it flows into our backend system.
